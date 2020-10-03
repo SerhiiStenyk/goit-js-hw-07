@@ -6,12 +6,10 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const ingredientsEl = document.querySelector('ul#ingredients');
-ingredientsEl.append(
-  ...ingredients.map(ingredient => {
-    const liEl = document.createElement('li');
-    liEl.textContent = ingredient;
-    return liEl;
-  }),
-);
-console.log(ingredientsEl);
+const ingredientsListEl = document.querySelector('ul#ingredients');
+const ingredientEl = ingredients.map(ingredient => {
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  return liEl;
+});
+ingredientsListEl.append(...ingredientEl);
